@@ -1,0 +1,12 @@
+{
+  "opw_bridge":      { "version": "1.0.0", "changelog": "Premiere version : librairie commune, hub /opw, detection des systemes." },
+  "opw_bank":        { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
+  "opw_customs":     { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
+  "opw_dealership":  { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
+  "opw_fuel":        { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
+  "opw_garage":      { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
+  "opw_housing":     { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
+  "opw_invoice":     { "version": "1.0.1", "changelog": "Migration vers opw_bridge." },
+  "opw_vehiclekeys": { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
+  "opw_vehiclemenu": { "version": "1.0.0", "changelog": "Migration vers opw_bridge." }
+}
