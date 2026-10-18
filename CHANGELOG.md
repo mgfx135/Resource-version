@@ -62,15 +62,59 @@ Version de correctifs issue d'un audit complet de la ressource. Les tables se me
 
 ## opw_dealership 1.1.0 (18/10/2026)
 
-Version de correctifs issue d'un audit complet de la ressource. Nécessite **opw_bridge 1.0.1**. La migration `003_reliability` s'applique au premier démarrage.
+Version de correctifs issue d'un audit complet de la ressource. Nécessite **opw_bridge 1.0.1**. La migration `003_reliability` s'applique au premier démarrage (nouvelles colonnes et tables, index).
 
-- Les exports `GiveVehicle` et `GeneratePlate` sont réservés aux ressources autorisées (`integrations.allowedResources`, vide par défaut).
-- Marge minimale de vente (`sales.minNetPercent`, 50 %).
-- Reprise d'un véhicule vendu en concession possible après 24 h, plafonnée au prix payé × coefficient.
-- Les factures de vente expirent (48 h, 2 en attente au maximum).
-- Les commandes arrivées et non retirées sont annulées après 7 jours.
-- En mode vendeur obligatoire, un client ne peut plus commander seul.
-- La suppression d'une concession est bloquée tant qu'il reste des opérations en cours.
+### Changements visibles en jeu
+
+**Clients**
+- Promotions, codes promo et remises ne font plus descendre un véhicule sous **50 % de son prix** (`sales.minNetPercent`) : plus de véhicule gratuit.
+- Prix augmenté entre l'affichage et l'achat (promotion terminée, prix modifié) : achat refusé avec « Le prix a changé », nouveau prix affiché, confirmation à refaire.
+- Réessayer après un échec (fonds insuffisants, facture refusée…) fonctionne : la fenêtre ne reste plus bloquée sur « en attente de paiement ».
+- Solde affiché à jour à l'étape de paiement.
+- Factures de vente : à payer sous **48 h** (`sales.invoiceValidityHours`), sinon la vente est annulée et tout est libéré ; **2 factures en attente** au maximum par joueur.
+- Reprise d'un véhicule acheté en concession : possible après **24 h** (`tradein.minOwnedHours`), jamais plus chère que le prix payé × coefficient de reprise.
+- Commandes hors stock : à finaliser sous **7 jours** (`stock.orderReadyDays`), sinon annulées et remboursées ; plus de commande seul en mode vendeur obligatoire ni hors des horaires ; acompte payé avec un compte accepté par la concession.
+- Essais routiers : caution remboursée sur le compte qui l'a payée, pires dégâts de l'essai retenus (réparer avant de rendre ne sert plus à rien), retour dans l'instance d'origine, délai entre deux essais conservé au redémarrage.
+- Remboursement ou excédent de reprise que la société ne peut pas payer : « versement en attente », versé automatiquement dès que son compte le permet.
+
+**Vendeurs**
+- Validité d'un devis limitée au réglage de la concession.
+- Devis remisé refusé à la signature si le vendeur a perdu le droit d'accorder cette remise.
+- Remises répétées au même client signalées dans le journal.
+
+**Patrons**
+- Promotion en montant fixe limitée comme une promotion en pourcentage (une promotion « tout gratuit » est refusée).
+- Commissions par grade plafonnées à 20 % (`commission.maxRate`).
+- Nouvelle carte « Versements en attente » dans le tableau de bord.
+
+**Administration**
+- Tableau de bord : encart « À traiter » (ventes payées non livrées, factures remboursées après livraison, contrats sans échéance, dettes des sociétés) ; derniers logs réservés à la permission « logs ».
+- « Relancer la livraison » reprend à l'étape manquante, sans second véhicule ni second paiement.
+- Annulation refusée pour une vente dont la facture est déjà en partie payée.
+- Suppression d'une concession refusée tant qu'il reste ventes, financements, commandes ou occasions.
+- Import « Remplacer » : modèles absents désactivés (jamais supprimés), import refusé si une ligne est invalide ; suppression d'un modèle encore utilisé refusée.
+- Financement : « Libérer » laisse un délai de paiement ; un véhicule financé passé à un autre joueur n'est jamais saisi (contrat gelé et signalé).
+- Identifiants des joueurs visibles seulement avec la permission de don de véhicule.
+- Nouveaux réglages : prix plancher, validité des factures, factures en attente par joueur, délai avant reprise, délai de finalisation des commandes, commission maximale, ressources autorisées.
+
+### Sécurité et fiabilité
+
+- Achat puis reprise immédiate d'un véhicule bon marché avec options d'usine : la boucle qui créait de l'argent est fermée.
+- Livraison reprenable étape par étape ; client remboursé si la livraison échoue avant l'inscription du véhicule.
+- Aucun versement d'une société sans débit (dettes `opw_dealership_debts`) ; grand livre de tous les mouvements (`opw_dealership_ledger`).
+- Un devis ou une commande ne donne lieu qu'à une seule vente ; prélèvements et remboursement anticipé ne se chevauchent plus.
+- Plaques personnalisées réservées de façon atomique et persistante ; aucun doublon de plaque, y compris sous QBCore.
+- Stock jamais réécrit depuis le cache (plus de survente).
+- Les joueurs ne peuvent plus modifier les fiches du catalogue (stats, énergie) depuis l'aperçu.
+- Table ESX `vehicles` : seules les lignes créées par la concession sont modifiées, jamais sous QBCore.
+- Codes promo : même réponse pour tout code refusé, 10 essais ratés par 10 minutes.
+- Recherches et requêtes de plaques indexées ; liste des reprises en 4 requêtes ; plus de rechargement des véhicules d'exposition à chaque vente.
+
+### À faire avant de mettre à jour
+
+1. Mettre à jour **opw_bridge en 1.0.1** en même temps.
+2. Ajouter dans *Paramètres › Intégrations › Ressources autorisées* (groupe racine) les scripts qui appellent `GiveVehicle` ou `GeneratePlate` : sinon ils sont refusés.
+3. Vérifier la console au premier démarrage : `migration 003_reliability appliquee`.
 
 ---
 
