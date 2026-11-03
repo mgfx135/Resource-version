@@ -4,6 +4,31 @@ Les versions publiées sont listées dans `versions.json` (lu par GN_Bridge). Ce
 
 ---
 
+## Renommage OPW vers GN (03/11/2026)
+
+Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les anciens noms ne fonctionnent plus.**
+
+- Global `GN`, permissions `gn.<ressource>.admin`, hub `/gn`, tables `gn_*`, comptes `GN-####-####`.
+- `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
+- `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
+
+## Versions publiées
+
+- **GN_Bridge 1.1.3** : Socle GN.Api pour les exports publics, relais de toutes les alertes GN.Dispatch, journal aligne malgre les champs vides, hierarchie des groupes dans les permissions.
+- **GN_Bank 1.2.0** : API d'exports 2.0.0 (anciens exports retires), facade de distributeur realiste, application lb-phone refaite, choix de la carte au paiement.
+- **GN_Customs 1.9.0** : Preparation (kit drift, transmission, boite), taille et largeur des roues, carnet d'entretien et usure des organes, application lb-phone, API d'exports 2.0.0 (anciens exports retires).
+- **GN_Dealership 1.5.0** : Reprise selon le carnet d'entretien, types de garage et kilometrage lus depuis GN_Garage, application Concession refaite, API d'exports 2.0.0 (anciens exports retires).
+- **GN_Fuel 1.3.0** : Facteur de consommation par vehicule, commande /fuelconso, API d'exports 2.1.0 (anciens exports retires). Prend le nom de l'ancien script GN_Fuel, qui n'est plus pris en charge.
+- **GN_Garage 1.4.0** : Kilometrage des vehicules, types de garage forces par modele, nombre de places, masquage du HUD a l'ouverture, API d'exports 2.0.0 (anciens exports retires).
+- **GN_Housing 1.6.1** : Catalogue de 106 interieurs, vie quotidienne, multi-agences, application Dynasty, menu F6 de l'agence, zones MLO, API d'exports 2.0.0 (anciens exports retires), hook beforeRaid.
+- **GN_Invoice 1.2.0** : API d'exports 2.0.0 (anciens exports retires), comptes GN_Bank pour la facturation.
+- **GN_Taxi 1.1.0** : Metier taxi : compagnies, courses, application lb-phone, tableau du patron, progression, API 2.0.0, version lite. 1.1.0 : menu F6 du chauffeur, vraie carte GTA, missions PNJ, avis des clients.
+- **GN_MDT 1.0.0** : Premiere version : departements, fiches, code penal, rapports, prison, mandats, dispatch, RH, secours, justice, mairie, API 2.0.0, version lite.
+- **GN_VehicleKeys 1.2.0** : API d'exports 2.0.0 (anciens exports retires), carte bancaire independante au serrurier.
+- **GN_VehicleMenu 1.0.0** : Renommage OPW vers GN (tables, ACE, exports).
+
+---
+
 ## GN_Customs 1.1.0 (18/10/2026)
 
 Version de correctifs issue d'un audit complet de la ressource. Les tables se mettent à jour toutes seules au premier démarrage (migrations versionnées dans `gn_customs_schema`).
