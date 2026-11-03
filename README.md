@@ -1,7 +1,7 @@
 # Resource-version
 
-Dernieres versions publiees des ressources OPW, lues par **opw_bridge** (hub `/opw`,
-console `opw diag` / `opw updates`) pour signaler les mises a jour disponibles.
+Dernieres versions publiees des ressources GN, lues par **GN_Bridge** (hub `/gn`,
+console `gn diag` / `gn updates`) pour signaler les mises a jour disponibles.
 
 Fichier lu : `versions.json`
 URL : `https://raw.githubusercontent.com/mgfx135/Resource-version/main/versions.json`
@@ -15,4 +15,4 @@ URL : `https://raw.githubusercontent.com/mgfx135/Resource-version/main/versions.
 4. Pousser ce depot. Les serveurs verifient au demarrage puis toutes les 6 h (reglable dans le hub).
 
 Un serveur dont la version installee est plus ancienne voit l'avertissement en console et
-la mise a jour dans le hub (page Ressources OPW).
+la mise a jour dans le hub (page Ressources GN).

@@ -1,12 +1,12 @@
 {
-  "opw_bridge":      { "version": "1.0.1", "changelog": "Permissions : un administrateur ne peut plus modifier ni supprimer un groupe plus puissant que le sien ; correction des codes d erreur partages entre ressources." },
-  "opw_bank":        { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
-  "opw_customs":     { "version": "1.1.0", "changelog": "Correctifs de securite et fiabilite (audit) : depense du compte entreprise reservee au grade de gestion ou au droit Retrait, seul le proprietaire customise son vehicule, recrutement par invitation, factures OPW Invoice suivies et remboursees si besoin, stats patron justes (table des ventes), codes promo proteges, paiement carte des factures, migrations SQL automatiques." },
-  "opw_dealership":  { "version": "1.1.0", "changelog": "Correctifs de securite et fiabilite (audit) : prix plancher a 50 % (plus de vehicule gratuit), reprise apres 24 h plafonnee au prix paye (fin de la boucle achat/reprise), livraison reprenable, dettes de societe au lieu d argent cree, factures de vente qui expirent (48 h), commandes non retirees annulees apres 7 j, exports GiveVehicle/GeneratePlate reserves aux ressources autorisees, migration SQL 003. Necessite opw_bridge 1.0.1. Notes completes : CHANGELOG.md." },
-  "opw_fuel":        { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
-  "opw_garage":      { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
-  "opw_housing":     { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
-  "opw_invoice":     { "version": "1.0.1", "changelog": "Migration vers opw_bridge." },
-  "opw_vehiclekeys": { "version": "1.0.0", "changelog": "Migration vers opw_bridge." },
-  "opw_vehiclemenu": { "version": "1.0.0", "changelog": "Migration vers opw_bridge." }
+  "GN_Bridge":      { "version": "1.0.1", "changelog": "Permissions : un administrateur ne peut plus modifier ni supprimer un groupe plus puissant que le sien ; correction des codes d erreur partages entre ressources." },
+  "GN_Bank":        { "version": "1.0.0", "changelog": "Migration vers GN_Bridge." },
+  "GN_Customs":     { "version": "1.1.0", "changelog": "Correctifs de securite et fiabilite (audit) : depense du compte entreprise reservee au grade de gestion ou au droit Retrait, seul le proprietaire customise son vehicule, recrutement par invitation, factures GN Invoice suivies et remboursees si besoin, stats patron justes (table des ventes), codes promo proteges, paiement carte des factures, migrations SQL automatiques." },
+  "GN_Dealership":  { "version": "1.1.0", "changelog": "Correctifs de securite et fiabilite (audit) : prix plancher a 50 % (plus de vehicule gratuit), reprise apres 24 h plafonnee au prix paye (fin de la boucle achat/reprise), livraison reprenable, dettes de societe au lieu d argent cree, factures de vente qui expirent (48 h), commandes non retirees annulees apres 7 j, exports GiveVehicle/GeneratePlate reserves aux ressources autorisees, migration SQL 003. Necessite GN_Bridge 1.0.1. Notes completes : CHANGELOG.md." },
+  "GN_Fuel":        { "version": "1.0.0", "changelog": "Migration vers GN_Bridge." },
+  "GN_Garage":      { "version": "1.0.0", "changelog": "Migration vers GN_Bridge." },
+  "GN_Housing":     { "version": "1.0.0", "changelog": "Migration vers GN_Bridge." },
+  "GN_Invoice":     { "version": "1.0.1", "changelog": "Migration vers GN_Bridge." },
+  "GN_VehicleKeys": { "version": "1.0.0", "changelog": "Migration vers GN_Bridge." },
+  "GN_VehicleMenu": { "version": "1.0.0", "changelog": "Migration vers GN_Bridge." }
 }
