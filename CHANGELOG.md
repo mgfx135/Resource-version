@@ -12,7 +12,29 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
-## Versions publiées
+## Mise à jour du 07/11/2026
+
+**Nouvelles ressources**
+
+- **GN_Police 1.2.0** : métier de policier sur le terrain (départements et commissariats, service, menottes, fouille, contrôles, garde à vue, armurerie, route, preuves, K9, hélicoptère, missions PNJ animées, tableau du patron, API, version lite). Remplace esx_policejob.
+- **GN_Ambulance 1.1.0** : mort des joueurs et métier d'ambulancier (services médicaux et hôpitaux, réanimation, blessures, soins en mini-jeux, brancard, pharmacie, morgue, application lb-phone, tableau du patron, API, version lite). Remplace esx_ambulancejob : arrêtez-le, ou coupez « GN_Ambulance gère la mort des joueurs ».
+- **GN_Clothing 1.7.7** : vêtements en items ox_inventory et slots d'équipement, sélection des personnages, identité et créateur, magasins avec stock et soldes, coiffeur et tatoueur façon GTA Online, vestiaires de métier, panel et statistiques, API, version lite. Remplace esx_skin et skinchanger. Images dans la ressource GN_Clothing_images.
+- **GN_Identity 1.0.0** : papiers officiels (carte d'identité, passeport, permis et licences synchronisés avec esx_license, cartes grises, cartes professionnelles), points de permis, guichet de mairie, faux papiers, contrôle par la police, application Wallet, API, version lite.
+- **GN_Restaurant 1.1.0** : restauration générique (fast-food, restaurant, bar, café, food truck), cuisine en mini-jeux, borne libre-service, salle et réservations, clients PNJ, approvisionnement, livraisons, alcool, application lb-phone GN Food, API, version lite.
+- **GN_News 1.0.0** : métier de journaliste (médias concurrents, articles et relecture, journal papier, application lb-phone GN News, carte de presse, reportage et drone, directs, alertes à couvrir, publicités, API, version lite).
+
+**Mises à jour**
+
+- **GN_Bridge 1.5.0** : module GN.Status faim et soif (esx_status, QBCore), module emotes, adaptateurs de vêtements, GN_MDT détecté en premier comme dispatch, lb-phone étendu (Wallet, mail, localisation, déverrouillage), `GN.Invoice.Pay`. Requis par GN_Police, GN_Clothing, GN_Ambulance et GN_Restaurant.
+- **GN_MDT 1.1.5** : tablette façon iPad (accueil, apps, dock, sélecteur d'apps), panneau d'appel en jeu, patrouilles, alertes automatiques, amendes et convocations par mail, mandats de localisation et de déverrouillage du téléphone, formations des agents pour GN_Police, dossiers médicaux ouverts à GN_Ambulance.
+- **GN_Dealership 1.6.0** : concessions métier (achat payé par la société du job, grade minimum par concession et par véhicule, livraison au garage métier GN_Garage, remise en %). Migration SQL 005. Police, Ambulance et Restaurant achètent désormais leurs véhicules ici, et les sortent par GN_Garage.
+- **GN_Customs 1.12.1** : portes, capot et coffre ouverts selon la pièce travaillée (réglage par atelier), tunnels de lavage façon GTA, couleurs de peinture addon lues depuis la ressource `gn_paints`.
+- **GN_Bank 1.3.0** : application Wallet de lb-phone (opérations du compte courant, message à chaque virement).
+- **GN_Garage 1.4.1** : GN_Ambulance dans la liste blanche par défaut de l'API. Si la liste a déjà été enregistrée dans le panel, l'y ajouter à la main.
+
+---
+
+## Versions publiées le 03/11/2026
 
 - **GN_Bridge 1.1.3** : Socle GN.Api pour les exports publics, relais de toutes les alertes GN.Dispatch, journal aligne malgre les champs vides, hierarchie des groupes dans les permissions.
 - **GN_Bank 1.2.0** : API d'exports 2.0.0 (anciens exports retires), facade de distributeur realiste, application lb-phone refaite, choix de la carte au paiement.
