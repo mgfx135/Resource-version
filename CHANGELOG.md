@@ -12,6 +12,11 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Identity 1.1.0 et GN_Ambulance 1.1.1 (07/11/2026)
+
+- **GN_Identity 1.1.0** : conditions d'achat par document et par catégorie de permis, réglées dans le panel (licence esx_license / QBCore, ou autre papier GN : le permis C exige le B). Permis de conduire, bateau, pilote et port d'arme achetés au guichet, qui indique ce qui manque. Plaque et image du véhicule sur la carte grise (image lue dans GN_Garage).
+- **GN_Ambulance 1.1.1** : `/revive me`, `/heal me` et `/kill me` visent soi-même ; `/heal`, le lit de l'accueil et l'export `Heal` remettent aussi la faim et la soif au maximum ; commande `/blessures` retirée.
+
 ## Mise à jour du 07/11/2026
 
 **Nouvelles ressources**
