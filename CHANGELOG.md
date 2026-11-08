@@ -12,6 +12,11 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Customs 1.21.1 (08/11/2026)
+
+- **Animations custom** fournies avec la ressource (dossier `stream`), une par geste du mécanicien : réparer, travailler sous le capot, changer une roue, nettoyer, diagnostic, crocheter, travailler sous le véhicule, retourner un véhicule, fourrière (bloc-notes).
+- Réglées dans `config/anims.lua` (`Config.CustomAnims`), chacune désactivable ; si un fichier ne se charge pas, l'animation GTA d'avant est jouée à la place.
+
 ## GN_Bridge 1.5.1 et GN_Clothing 1.13.1 (08/11/2026)
 
 - **GN_Bridge 1.5.1** : chaque vérification des mises à jour écrit une ligne en console : la liste des ressources en retard avec leur changelog, « les N ressources GN installées sont à jour », ou la raison d'un échec (HTTP, fichier illisible, vérification désactivée). `gn updates` dans la console du serveur vérifie tout de suite.
