@@ -12,6 +12,11 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Bridge 1.5.1 et GN_Clothing 1.13.1 (08/11/2026)
+
+- **GN_Bridge 1.5.1** : chaque vérification des mises à jour écrit une ligne en console : la liste des ressources en retard avec leur changelog, « les N ressources GN installées sont à jour », ou la raison d'un échec (HTTP, fichier illisible, vérification désactivée). `gn updates` dans la console du serveur vérifie tout de suite.
+- **GN_Clothing 1.8.0 à 1.13.1** : animations fournies avec la ressource (dossier `stream`) pour enfiler et retirer chaque pièce : tête (chapeau, masque, lunettes, boucles d'oreilles), buste (haut, sous-vêtement, gilet, collier, sac, tenue complète), mains (gants, montre, bracelet), pantalon et chaussures en corps entier. Réglées par pièce dans `Config.CustomAnims`, repli sur les animations GTA. Commande `/clothinganim <pièce> <on|off>` pour les voir. Les poses de l'écran des personnages ajoutées en 1.13.0 ont été retirées en 1.13.1.
+
 ## GN_Housing 1.7.0 et GN_Identity 1.2.0 (08/11/2026)
 
 - **GN_Housing 1.7.0** : huit animations fournies avec la ressource (dossier `stream`) : clé dans la serrure, sonner et frapper à la porte, fouille du coffre, remise des clés, signature du contrat, présentation par l'agent, cambriolage, perquisition.
