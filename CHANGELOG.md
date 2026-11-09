@@ -12,6 +12,10 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Ambulance 1.3.1 (09/11/2026)
+
+- **Régénération naturelle de GTA bloquée** : sous 50 PV, la vie ne remonte plus toute seule ; seuls les soins, bandages, trousses et repas en rendent. Réglage `Config.NaturalRegen` (`false` par défaut, `true` pour remettre la régénération du jeu).
+
 ## GN_Customs 1.29.1 (09/11/2026)
 
 - **Ponts élévateurs** à deux colonnes dans les ateliers : /customadmin › atelier › Mécanicien › Ponts élévateurs (6 par atelier, placement avec un fantôme). Modèles **en add-on** dans `stream/` (`gncustom_tr_prop_tr_car_lift_01a`, `gncustom_m25_2_int_02_post_lift`, déclarés par `gncustom_carlift.ytyp`), indépendants des DLC du build du serveur.
