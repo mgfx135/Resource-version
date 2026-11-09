@@ -12,6 +12,16 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Customs 1.29.1 (09/11/2026)
+
+- **Ponts élévateurs** à deux colonnes dans les ateliers : /customadmin › atelier › Mécanicien › Ponts élévateurs (6 par atelier, placement avec un fantôme). Modèles **en add-on** dans `stream/` (`gncustom_tr_prop_tr_car_lift_01a`, `gncustom_m25_2_int_02_post_lift`, déclarés par `gncustom_carlift.ytyp`), indépendants des DLC du build du serveur.
+- **Commande** : action « Pont élévateur » des menus métier (target ou F6) ; le mécanicien va au bouton de la colonne, ↑ pour monter, ↓ pour descendre. Tous les joueurs voient le chariot bouger.
+- **Véhicule** : pris quand le pont quitte le sol, rendu quand il redescend. En l'air, personne n'y monte, et GN_Garage refuse de le ranger ou de le mettre en fourrière.
+- **Entretien F6** : hauteur réglée automatiquement selon la pièce, avec les animations « roue debout » et « sous le véhicule debout ».
+- **Réglages** : /customadmin › Paramètres › Pont élévateur (vitesse, hauteur max) et `config/carlift.lua`.
+- **API 2.5.0** : `ListLifts`, `GetLift`, `SetLiftHeight`, `IsVehicleOnLift`, événements `liftMoved`, `vehicleLifted`, `vehicleLowered`, hook `beforeLiftMove`.
+- Auteur des ressources GN affiché « GN By MGFX » dans les fxmanifest.
+
 ## GN_Customs 1.21.1 (08/11/2026)
 
 - **Animations custom** fournies avec la ressource (dossier `stream`), une par geste du mécanicien : réparer, travailler sous le capot, changer une roue, nettoyer, diagnostic, crocheter, travailler sous le véhicule, retourner un véhicule, fourrière (bloc-notes).
