@@ -14,11 +14,11 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 
 ## GN_Doorlock 1.24.3 (10/11/2026)
 
-- **Ouverture pilotée** des garages, portails et barrières : la porte monte et descend à vitesse constante, sans l’ouverture automatique du jeu. **Anti-écrasement** : un joueur, un PNJ ou un véhicule sous la porte la fait remonter. Durée d’ouverture réglable par porte (`Config.Pilot` par défaut).
-- **Mini-jeux d’effraction façon GTA Online** : piratage « circuit » et « mot de passe » (choix par porte ou au hasard), **molette** pour les coffres-forts.
+- **Ouverture pilotée** des garages, portails et barrières : la porte monte et descend à vitesse constante, sans l'ouverture automatique du jeu. **Anti-écrasement** : un joueur, un PNJ ou un véhicule sous la porte la fait remonter. Durée d'ouverture réglable par porte (`Config.Pilot` par défaut).
+- **Mini-jeux d'effraction façon GTA Online** : piratage « circuit » et « mot de passe » (choix par porte ou au hasard), **molette** pour les coffres-forts.
 - **Interaction par porte** : touche E et target, touche E seulement, ou target seulement.
-- **Debug et diagnostic** : `/doorlockdebug` et panel (fiche de la porte visée, zones, ouverture pilotée, résumé à l’écran, journal F8 et console serveur), diagnostic des portes et de la configuration.
-- **Correctif** : une porte verrouillée pouvait s’ouvrir après le chargement du personnage ; les portes perdues par le jeu sont maintenant réparées automatiquement.
+- **Debug et diagnostic** : `/doorlockdebug` et panel (fiche de la porte visée, zones, ouverture pilotée, résumé à l'écran, journal F8 et console serveur), diagnostic des portes et de la configuration.
+- **Correctif** : une porte verrouillée pouvait s'ouvrir après le chargement du personnage ; les portes perdues par le jeu sont maintenant réparées automatiquement.
 
 ## GN_Doorlock 1.16.5 (10/11/2026)
 
