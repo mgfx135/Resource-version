@@ -12,6 +12,21 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Doorlock 1.12.0, GN_Bridge 1.6.0, GN_Housing 1.8.0, GN_Police 1.3.0, GN_Clothing 1.16.0 (10/11/2026)
+
+**Nouvelle ressource**
+
+- **GN_Doorlock 1.12.0** : portes verrouillées créées en jeu (simples, doubles, portails, garages, barrières, cellules, coffres-forts, portes posées par prop), groupes, accès par job et grades, gang ou joueurs, clés en items et serruriers, badges GN_Identity, codes PIN, horaires, accès temporaires, ouverture depuis un véhicule, télécommandes, sonnettes. Effraction (crochetage, thermite, piratage, bélier) avec mini-jeux et réparation. Cadenas 3D, animations propres, import depuis ox_doorlock, qb-doorlock et nui_doorlock, export JSON, panel d'administration, API publique 1.0.0 (`EXPORTS.md`), version lite gratuite `GN_Doorlock_Lite`. Items et images dans `install/`.
+
+**Mises à jour**
+
+- **GN_Bridge 1.6.0** : module `GN.Doorlock` (détection de GN_Doorlock, ox_doorlock, qb-doorlock). Avec GN_Doorlock, une ressource GN peut créer et tenir à jour ses propres portes. GN_Doorlock_Lite, sans API, n'est pas détectée.
+- **GN_Housing 1.8.0** : avec GN_Doorlock, les portes déclarées dans l'éditeur d'un bien MLO deviennent des portes GN_Doorlock (propriétaire, locataire et porteurs de clé ; crochetage si le cambriolage est actif, bélier si la perquisition l'est). Le verrou du bien et les portes restent synchronisés. Sans GN_Doorlock, rien ne change.
+- **GN_Police 1.3.0** : avec GN_Doorlock, la porte de type « cellule » la plus proche du point de cellule (4 m) se verrouille quand la personne y est placée et se déverrouille à sa sortie.
+- **GN_Clothing 1.14.0 à 1.16.0** : clone du personnage au centre de l'inventaire, avec la tenue autour et l'aperçu au survol ; il joue aussi les animations d'habillage. Case de la tenue allumée pendant le glisser d'un vêtement (rouge si l'autre sexe). Paramètres du joueur dans l'inventaire (affichage du personnage, rotation, hauteur et distance du clone). Nécessite le fork ox_inventory du dépôt.
+
+GN_Housing 1.8.0 et GN_Police 1.3.0 utilisent `GN.Doorlock` : mettez GN_Bridge à jour en 1.6.0 en même temps.
+
 ## GN_Ambulance 1.3.1 (09/11/2026)
 
 - **Régénération naturelle de GTA bloquée** : sous 50 PV, la vie ne remonte plus toute seule ; seuls les soins, bandages, trousses et repas en rendent. Réglage `Config.NaturalRegen` (`false` par défaut, `true` pour remettre la régénération du jeu).
