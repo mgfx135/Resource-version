@@ -12,6 +12,15 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Doorlock 1.16.5 (10/11/2026)
+
+- **Cadenas 3D placé à la main** : fiche d'une porte › Cadenas 3D, à viser en caméra libre (poignée, serrure, digicode…), 6 m au plus du centre de la porte. Aussi dans la lite.
+- **Fiche d'une porte en onglets** (Général, Accès, Comportement, Options, Outils) avec un seul bouton Enregistrer.
+- **Assistant de création** en 6 étapes (bouton « Nouvelle porte », ou `/doorlock` en visant une porte) ; le type est proposé d'après les battants choisis.
+- **Digicode 3D** : le digicode posé devient un vrai clavier sur le mur, sur lequel on tape le code à la souris (caméra rapprochée, animation). Réglages dans `Config.Keypad3D`. Absent de la lite ; une porte à code sans digicode posé garde le clavier à l'écran. Les digicodes déjà posés sont à replacer.
+- **Portes refermées en douceur** avant d'être verrouillées (garages, portails, barrières), et une porte verrouillée que le jeu rouvre est refermée.
+- Listes avec recherche dans les accès et les outils, code PIN saisi dans la carte du digicode, export / import JSON avec la position du cadenas.
+
 ## GN_Doorlock 1.12.0, GN_Bridge 1.6.0, GN_Housing 1.8.0, GN_Police 1.3.0, GN_Clothing 1.16.0 (10/11/2026)
 
 **Nouvelle ressource**
