@@ -12,6 +12,11 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Ambulance 1.3.4 et GN_Police 1.10.1 (11/11/2026)
+
+- **GN_Ambulance 1.3.4** : la perte de sang remettait parfois la vie à 100 % au lieu de l'enlever (dégâts reçus en nombre à virgule, mal lus par GTA) ; ils sont maintenant arrondis en entier. Un joueur à terre ou K.O. garde une vie au minimum au lieu de remonter à 100 %, et le HUD n'affiche plus une vie pleine ; au relevé, la vie est celle du soin.
+- **GN_Police 1.10.1** : même correctif pour la morsure du chien (K9), dont les dégâts sont arrondis en entier.
+
 ## GN_Restaurant 1.22.3 (11/11/2026)
 
 - **Écrans sur les props** : la borne, l'écran des commandes en cuisine et le menu sont des écrans posés dans le restaurant, qu'on utilise au curseur ; plus d'interface plein écran. Le menu remplace l'écran GTA et `Config.MenuBoard`.
