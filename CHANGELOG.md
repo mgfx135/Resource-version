@@ -12,6 +12,13 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Restaurant 1.14.0 (11/11/2026)
+
+- **Cuisine 3D à la souris** à la place des mini-jeux : le cuisinier se place devant l'appareil (cible « Cuisiner »), caméra du poste et curseur, ingrédients pris dans son inventaire. Postes : **plaque** (steaks à retourner, cheese qui fond), **friteuse** (paniers à descendre dans l'huile, cru, cuit puis brûlé), **plan de préparation** (burger monté couche par couche entre le pain du bas et celui du haut, sauces), **four** (pizzas et desserts), **fontaine à soda** (gobelet, glaçons, sirop, couvercle). Café, bar, tireuse et food trucks gardent une préparation simple avec une barre de progression.
+- **Plats composés** : un item par plat (`burger`, `pizza`, `soda`, desserts…), la composition est gardée en métadonnée. Nouveaux ingrédients, avec leurs images dans `install/ox_inventory/web/images`. Les anciens plats restent utilisables mais ne sont plus fabriqués.
+- **Repas sur plateau** : un plateau garni se pose sur une table et se mange une bouchée à la fois ; on peut le reprendre ou le débarrasser. Les plateaux posés restent après un redémarrage (table `gn_restaurant_meals`).
+- **Nouvelle dépendance** : la ressource de modèles `GN_Restaurant_props` (props `gnresto_`), à démarrer avant GN_Restaurant.
+
 ## Animations de GN_Police, GN_VehicleKeys, GN_Restaurant et GN_Bank (11/11/2026)
 
 Animations fournies avec chaque ressource (dossier `stream`), réglées dans `config.anims.lua` (chacune désactivable), avec repli sur les animations GTA si un fichier ne se charge pas. Les objets tenus en main se placent avec `/gnprop` de GN_Bridge 1.7.0.
