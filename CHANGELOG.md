@@ -12,6 +12,15 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Restaurant 1.22.3 (11/11/2026)
+
+- **Écrans sur les props** : la borne, l'écran des commandes en cuisine et le menu sont des écrans posés dans le restaurant, qu'on utilise au curseur ; plus d'interface plein écran. Le menu remplace l'écran GTA et `Config.MenuBoard`.
+- **Caisse** : nouveau point « Caisses » au panel (5 au plus). Un employé en service encaisse un client joueur, qui accepte ou refuse sur son écran ; payé, le ticket part en cuisine à son nom.
+- **Marque** : le logo (URL) et la couleur de chaque restaurant sont peints sur les sacs, gobelets, boîtes à pizza, papiers de plateau et sur les écrans.
+- **Clients PNJ** : jauge de patience et expression du visage visibles par les joueurs proches, note du repas de 1 à 5, repas pris à table ; note moyenne et avis dans les stats du patron.
+- **Livraisons à la porte** : le livreur frappe et remet la commande. **Adresses de livraison** par restaurant, placées au panel en caméra libre et à la suite (porte et sortie du client).
+- **Finitions** : réglages `kitchen.cook3d`, `kitchen.cookSpeed`, `meal.*` et `brand.*` ; nouvelles fonctions et nouveaux événements dans l'API (`EXPORTS.md`). La version lite garde la cuisine 3D, la borne, l'écran des commandes, le menu, les PNJ et les livraisons ; elle n'a ni caisse, ni marque, ni plateau posé.
+
 ## GN_Restaurant 1.14.0 (11/11/2026)
 
 - **Cuisine 3D à la souris** à la place des mini-jeux : le cuisinier se place devant l'appareil (cible « Cuisiner »), caméra du poste et curseur, ingrédients pris dans son inventaire. Postes : **plaque** (steaks à retourner, cheese qui fond), **friteuse** (paniers à descendre dans l'huile, cru, cuit puis brûlé), **plan de préparation** (burger monté couche par couche entre le pain du bas et celui du haut, sauces), **four** (pizzas et desserts), **fontaine à soda** (gobelet, glaçons, sirop, couvercle). Café, bar, tireuse et food trucks gardent une préparation simple avec une barre de progression.
