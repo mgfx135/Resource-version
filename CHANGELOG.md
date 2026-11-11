@@ -12,6 +12,14 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## Mise à jour du 11/11/2026
+
+- **GN_Fuel 1.9.0** (depuis 1.3.0) : animations fournies avec la ressource (dossier `stream`) : pistolet décroché, tenu en main droite et raccroché, trappe et bouchon, remplissage, jerrican, borne électrique, paiement à l'écran de la pompe ou par carte. Réglées dans `config/anims.lua`, repli sur les animations GTA. Modèle de pompe choisi dans l'éditeur de station. La borne `prop_electric_01` et sa prise viennent de [lc_fuel](https://github.com/LeonardoSoares98/lc_fuel) (licence GPL-3.0, texte dans `licenses/`).
+- **GN_Bridge 1.7.0** : outil `/gnprop` pour placer à la souris les objets tenus en main par les ressources GN (pose figée, caméra, gizmo), avec la ligne de configuration à copier.
+- **GN_Customs 1.29.2**, **GN_Housing 1.8.1**, **GN_Doorlock 1.24.4**, **GN_Identity 1.2.1** : objets tenus en main déclarés pour `/gnprop` ; positions des objets du mécanicien réglées dans GN_Customs.
+- **GN_Identity 1.2.2** : un achat de véhicule ne donne plus qu'une seule carte grise automatique (il en arrivait parfois deux).
+- **GN_Dealership 1.6.1** : l'application lb-phone de la concession se déclare même quand lb-phone démarre après elle (nouvel essai pendant une minute).
+
 ## GN_Doorlock 1.24.3 (10/11/2026)
 
 - **Ouverture pilotée** des garages, portails et barrières : la porte monte et descend à vitesse constante, sans l'ouverture automatique du jeu. **Anti-écrasement** : un joueur, un PNJ ou un véhicule sous la porte la fait remonter. Durée d'ouverture réglable par porte (`Config.Pilot` par défaut).
