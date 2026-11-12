@@ -12,6 +12,13 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Police 1.13.0 (12/11/2026)
+
+- **Herses à longueur réglable** : pendant la pose, la molette ajoute ou retire des éléments (1 à `road.spikesMax`, 6 par défaut). Une herse longue ne consomme qu'un objet et compte pour une seule pose.
+- **Grappin de capture** : item `police_grappler` (armurerie, certification « Conduite d'interception », nouveau droit « Grappin de capture »). Installé à l'avant d'un véhicule d'urgence, il se tire au volant (touche J par défaut, ou F6) sur le véhicule juste devant. La voiture accrochée ralentit jusqu'à l'arrêt ; le câble casse si l'écart devient trop grand, et le grappin peut être retiré à pied après un délai. Absent de la version lite.
+- Animations propres pour installer, démonter et retirer le grappin. Un voleur PNJ abandonne la voiture harponnée et s'enfuit à pied.
+- Le modèle 3D du grappin vient de la ressource séparée `GN_Police_props` (à démarrer avant GN_Police) ; sans elle, le treuil de GTA est utilisé.
+
 ## GN_Ambulance 1.3.4 et GN_Police 1.10.1 (11/11/2026)
 
 - **GN_Ambulance 1.3.4** : la perte de sang remettait parfois la vie à 100 % au lieu de l'enlever (dégâts reçus en nombre à virgule, mal lus par GTA) ; ils sont maintenant arrondis en entier. Un joueur à terre ou K.O. garde une vie au minimum au lieu de remonter à 100 %, et le HUD n'affiche plus une vie pleine ; au relevé, la vie est celle du soin.
