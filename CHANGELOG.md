@@ -12,6 +12,21 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Prison et GN_Casino, mises à jour du 14/11/2026
+
+**Nouvelles ressources**
+
+- **GN_Prison 1.0.0** : prison complète. Bolingbroke est prêt à l'emploi, et d'autres prisons se créent en jeu. Peines purgées en ligne, écrou, vie en détention, travaux, trafic, évasions, sortie et caution, métier de gardien, application lb-phone, API publique, version lite. Si GN_MDT 1.1.7 est démarré, la tablette passe par elle pour les peines.
+- **GN_Casino 1.0.0** : casino complet dans le Diamond. Jetons en item (`casino_chip`, 1 jeton = 1 $), caisse, machines à sous, roue de la fortune, blackjack, poker trois cartes, roulette, Inside Track (courses de chevaux), carte membre (`casino_card`), VIP, fidélité, métier casino, API publique, version lite. Tables SQL dans `install.sql`.
+
+**Mises à jour**
+
+- **GN_MDT 1.1.7** : quand GN_Prison est démarrée (réglage « GN_MDT » coché), la prison de la tablette passe par elle (libération, modification des peines, liste des détenus, même hors ligne). Une peine de la prison interne encore en cours est transférée.
+- **GN_Police 1.19.0 et 1.19.1** : export `AddEvidence` (empreinte ou trace de sang laissée par une autre ressource) ; avec GN_Prison, les menottes et l'escorte restent en place jusqu'à l'arrivée ou l'écrou, et les menottes prises reviennent à l'agent.
+- **GN_Doorlock 1.25.0** : export `StartMinigame` pour ouvrir un mini-jeu d'effraction (circuit, mot de passe, molette, suite de chiffres) chez un joueur, sans porte.
+- **GN_Bank 1.7.0** : exports `ListAtms` et `SetAtmDisabled` : un distributeur peut être mis hors service pendant un temps, puis revient tout seul.
+- **GN_Bridge 1.7.1** : GN_Prison et GN_Casino (et leurs versions lite) reconnues parmi les ressources GN (hub `/gn`, liste blanche des API).
+
 ## GN_Police 1.18.0 et GN_MDT 1.1.6 (14/11/2026)
 
 - **Caméra-serpent** (GN_Police) : item `police_snakecam` (armurerie) et droit « Caméra-serpent ». Face à une porte, l'agent se met à genoux et glisse la caméra dessous pour voir de l'autre côté (déplacement au clavier, réglages `snakecam.length` et `snakecam.speed`). Clic gauche pour prendre une photo ; les agents proches peuvent regarder la même vue.
