@@ -12,6 +12,14 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Casino 1.0.1 (14/11/2026)
+
+- **Machines à sous et roue de la fortune** : le joueur est animé par des scènes synchronisées en réseau, comme dans les scripts Rockstar ; les autres joueurs voient l'animation. La roue joue les bons clips GTA (homme et femme) et s'arrête sur le segment gagné.
+- **Tables reprises de GTA** : cartes de chaque place et du croupier au blackjack, cartes et jetons Ante / Pair Plus / Play au poker, jetons sur la bonne case à la roulette, places dans l'ordre du jeu, croupier bien placé.
+- **Caméras des tables** : vue assise puis vue de la table au blackjack et au poker ; vue du tapis puis de la roue à la roulette. La touche caméra passe de l'une à l'autre.
+- 4e table de poker dans la salle VIP du Diamond (migration 8, appliquée au démarrage).
+- Correctif : erreur `client/api.lua:49` au démarrage.
+
 ## GN_Prison et GN_Casino, mises à jour du 14/11/2026
 
 **Nouvelles ressources**
