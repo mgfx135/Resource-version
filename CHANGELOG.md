@@ -12,6 +12,14 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Police 1.18.0 et GN_MDT 1.1.6 (14/11/2026)
+
+- **Caméra-serpent** (GN_Police) : item `police_snakecam` (armurerie) et droit « Caméra-serpent ». Face à une porte, l'agent se met à genoux et glisse la caméra dessous pour voir de l'autre côté (déplacement au clavier, réglages `snakecam.length` et `snakecam.speed`). Clic gauche pour prendre une photo ; les agents proches peuvent regarder la même vue.
+- **Reconstitution de scène** (GN_Police) : depuis le labo, sur un sachet ou une analyse, les preuves laissées autour de la même scène réapparaissent sur place (douilles, impacts avec la trajectoire du tir, sang, empreintes, étiquettes 3D). Réglages `recon.radius` et `recon.minutes`. `/policetest recon` joue une scène fictive.
+- **Depuis un rapport** (GN_MDT 1.1.6) : bouton « Reconstituer la scène » dans la carte Preuves des rapports créés par le labo de GN_Police.
+- **API GN_Police 1.1.0** : événements du grappin, de la caméra-serpent et de la reconstitution, hook `beforeGrapple`, lectures `GetReportScene` et `ReconstructReport`. Icônes `police_grappler` et `police_snakecam` dans `install/ox_inventory/web/images`.
+- Caméra-serpent et reconstitution sont absentes de la version lite.
+
 ## GN_Police 1.13.0 (12/11/2026)
 
 - **Herses à longueur réglable** : pendant la pose, la molette ajoute ou retire des éléments (1 à `road.spikesMax`, 6 par défaut). Une herse longue ne consomme qu'un objet et compte pour une seule pose.
