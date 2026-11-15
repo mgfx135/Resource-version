@@ -12,6 +12,13 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Casino 1.0.2 (15/11/2026)
+
+- **Machines à sous dans l'ordre de GTA** : le levier de la machine s'abaisse avec le joueur, les rouleaux partent quand il est en bas, et le gain est versé à leur arrêt. On se lève avec Retour arrière ou Échap, avec l'animation de sortie.
+- **Roue de la fortune** : courte animation d'élan, puis la roue ralentit jusqu'au segment gagné ; le lot est remis à son arrêt (le tour est compté dès le lancer).
+- **Nouvelle planche de symboles de la roue** (`stream/vw_prop_vw_luckywheel.ytd`) : jeton, ticket et BONUS à la place des symboles d'origine ; les autres textures sont celles du jeu.
+- **`/casinodebug`** (permission test) : chaque étape des machines à sous et de la roue dans la console F8, et un panneau d'état assis à une machine.
+
 ## GN_Casino 1.0.1 (14/11/2026)
 
 - **Machines à sous et roue de la fortune** : le joueur est animé par des scènes synchronisées en réseau, comme dans les scripts Rockstar ; les autres joueurs voient l'animation. La roue joue les bons clips GTA (homme et femme) et s'arrête sur le segment gagné.
