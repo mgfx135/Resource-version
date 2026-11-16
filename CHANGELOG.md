@@ -12,6 +12,10 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Bridge 1.7.2 (16/11/2026)
+
+- GN_Vigneron et GN_Vigneron_Lite reconnues parmi les ressources GN (hub `/gn`, liste blanche des API), en vue de la prochaine ressource GN_Vigneron.
+
 ## GN_Casino 1.0.2 (15/11/2026)
 
 - **Machines à sous dans l'ordre de GTA** : le levier de la machine s'abaisse avec le joueur, les rouleaux partent quand il est en bas, et le gain est versé à leur arrêt. On se lève avec Retour arrière ou Échap, avec l'animation de sortie.
