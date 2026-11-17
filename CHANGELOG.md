@@ -12,6 +12,11 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Housing 1.9.0 et GN_Restaurant 1.23.0 (17/11/2026)
+
+- **GN_Housing 1.9.0** : pour chaque meuble à coffre, Panel › Mobilier permet de limiter les objets acceptés (par début de nom d'item) et de lui donner une étiquette que d'autres ressources peuvent lire ; un objet refusé ne peut pas y entrer. Nouveaux exports `AddCatalogItem` (une ressource ajoute son propre meuble au catalogue) et `GetStashTag`. API 2.2.0.
+- **GN_Restaurant 1.23.0** : nouvel export `AddToStorage(id, objets)` pour déposer des objets dans la réserve d'un restaurant (liste blanche). Onglet « Vins » du bureau du patron, actif seulement avec la ressource GN_Vigneron (à venir) : commandes de vins aux domaines, livrées au quai et facturées par GN_Invoice.
+
 ## GN_Bridge 1.7.2 (16/11/2026)
 
 - GN_Vigneron et GN_Vigneron_Lite reconnues parmi les ressources GN (hub `/gn`, liste blanche des API), en vue de la prochaine ressource GN_Vigneron.
