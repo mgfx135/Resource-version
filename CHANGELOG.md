@@ -12,6 +12,17 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Vigneron 0.19.0, en développement (20/11/2026)
+
+Nouvelle ressource, **pas encore finie** : il manque l'application lb-phone, l'API publique et la documentation (étapes 17 et 18 du cahier). La version 1.0.0 viendra avec elles.
+
+- Domaines viticoles placés depuis le panel (job et société créés), parcelles avec rangs de vignes, six cépages, pousse en temps réel et météo.
+- Entretien des vignes (taille, arrosage, désherbage, traitement) et vendange à la main ou au tracteur.
+- Cave en 3D à la souris : foulage, pressurage, fermentation en cuve, élevage en fûts, assemblage, mise en bouteille et étiquetage ; vin effervescent et distillation à l'alambic.
+- Caveau avec dégustation et clients PNJ, vente aux négociants, marché, commandes des restaurants GN_Restaurant (1.23.0) facturées par GN_Invoice, concours, enchères et bouteilles de collection, casier à vin GN_Housing (1.9.0).
+- Ouvriers PNJ, tableau du patron (équipe, améliorations), véhicules par GN_Garage.
+- Props faits sous Blender (dossier `stream`), animations propres à la ressource.
+
 ## GN_Housing 1.9.0 et GN_Restaurant 1.23.0 (17/11/2026)
 
 - **GN_Housing 1.9.0** : pour chaque meuble à coffre, Panel › Mobilier permet de limiter les objets acceptés (par début de nom d'item) et de lui donner une étiquette que d'autres ressources peuvent lire ; un objet refusé ne peut pas y entrer. Nouveaux exports `AddCatalogItem` (une ressource ajoute son propre meuble au catalogue) et `GetStashTag`. API 2.2.0.
