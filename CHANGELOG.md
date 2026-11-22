@@ -12,6 +12,16 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## Liste blanche de l'API en cases à cocher (22/11/2026)
+
+Dans le panel de chaque ressource, la liste blanche de l'API (les ressources autorisées à appeler ses exports) se règle maintenant en cochant les ressources du serveur, au lieu de taper leurs noms. Les ressources GN sont en haut de la liste, un interrupteur autorise tout (`*`), et chaque changement est enregistré tout de suite.
+
+Ressources concernées : GN_Ambulance 1.4.0, GN_Bank 1.8.0, GN_Casino 1.1.0, GN_Clothing 1.17.0, GN_Customs 1.30.0, GN_Dealership 1.7.0, GN_Doorlock 1.26.0, GN_Fuel 1.10.0, GN_Garage 1.5.0, GN_Housing 1.10.0, GN_Identity 1.3.0, GN_Invoice 1.3.0, GN_MDT 1.2.0, GN_News 1.1.0, GN_Police 1.20.0, GN_Prison 1.1.0, GN_Restaurant 1.24.0, GN_Taxi 1.2.0, GN_VehicleKeys 1.8.0.
+
+## GN_Vigneron 1.0.1 (22/11/2026)
+
+La ressource est **terminée** : les étapes 16c à 18 du cahier ajoutent les derniers gestes et les grandes cuves, l'**application lb-phone** et l'**API publique 1.0.0** (exports, événements et hooks, documentés dans `EXPORTS.md`). La 1.0.1 ajoute la liste blanche de l'API en cases à cocher.
+
 ## GN_Vigneron 0.19.0, en développement (20/11/2026)
 
 Nouvelle ressource, **pas encore finie** : il manque l'application lb-phone, l'API publique et la documentation (étapes 17 et 18 du cahier). La version 1.0.0 viendra avec elles.
