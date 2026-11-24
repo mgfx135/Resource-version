@@ -12,6 +12,10 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Vigneron 1.0.3 (24/11/2026)
+
+- Correctif : on passait à travers les fûts posés sur le chantier de la cave ; ils sont maintenant posés à leur place avec leur collision.
+
 ## GN_Vigneron 1.0.2 (24/11/2026)
 
 - **Modèles 3D refaits** sous Blender : fûts et mobilier de cave, machines, vignes et petits objets, avec des matériaux communs et des textures intégrées aux modèles (le fichier `gnvigne_tools.ytd` n'existe plus).
