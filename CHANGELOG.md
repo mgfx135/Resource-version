@@ -12,6 +12,11 @@ Toutes les ressources OPW s'appellent désormais GN_*. **Aucun alias : les ancie
 - `GN_Fuel` désigne l'ex-opw_fuel. L'ancien script GN_Fuel n'est plus pris en charge, ni ses niveaux en litres.
 - `opw_notif`, `opw_location` et `opw_minimap` ne sont plus détectés.
 
+## GN_Vigneron 1.0.2 (24/11/2026)
+
+- **Modèles 3D refaits** sous Blender : fûts et mobilier de cave, machines, vignes et petits objets, avec des matériaux communs et des textures intégrées aux modèles (le fichier `gnvigne_tools.ytd` n'existe plus).
+- **Icônes d'items refaites** dans `install/images` : à recopier dans `ox_inventory/web/images`.
+
 ## Liste blanche de l'API en cases à cocher (22/11/2026)
 
 Dans le panel de chaque ressource, la liste blanche de l'API (les ressources autorisées à appeler ses exports) se règle maintenant en cochant les ressources du serveur, au lieu de taper leurs noms. Les ressources GN sont en haut de la liste, un interrupteur autorise tout (`*`), et chaque changement est enregistré tout de suite.
